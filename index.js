@@ -78,7 +78,7 @@ var getTasks = module.exports.tasks = function (options) {
         if (opt.verbose) {
           grunt.log.ok('[grunt-gulp] Done running Grunt "' + name + '" task.');
         }
-        cb();
+        cb(opt.ignore_failure ? undefined : code);
       });
     };
   }
